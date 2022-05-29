@@ -1,0 +1,93 @@
+.contact-page{
+    .content {
+        header {
+            position: relative;
+            min-height: 100vh;
+            height: unset;
+            @media (min-width: @sm){
+                height: 100vh;
+                min-height: unset;
+            }
+            
+            .despre {
+                display: flex;
+                flex-direction: column;
+                margin: 50px 10px;
+                align-items: center;
+
+                @media (min-width: @sm){
+                    flex-direction: row;
+                    justify-content: space-between;
+                    margin: auto 6%;
+                }
+
+                .form-container, .map-container{
+                    width: 90%;
+                    height: 80%;
+                    max-width: 600px;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    margin-bottom: 20px;
+
+                    @media (min-width: @sm){
+                        margin: 50px;
+                        padding: 30px;
+                        width: 50%;
+                    }
+
+
+
+                }
+
+                .form-container {
+                    justify-content: space-between;
+                    h1 {
+                        margin-bottom: 30px;
+                        @media (min-width: @sm){
+                            margin-bottom: unset;
+                        }
+                    }
+                }
+
+                .map-container {
+                    justify-content: unset;
+                    margin-top: 50px;
+                    @media (min-width: @sm){
+                        background-color: @white;
+                        box-shadow: 5px 5px 10px rgba(190, 191, 194, 0.7), -5px -5px 10px #FFFFFF;
+                        border-radius: 10px;
+                    }
+
+                    .maps {
+                        margin-bottom: 20px;
+                        padding: 5px;;
+                        box-shadow: inset 4px 4px 8px rgba(190, 191, 194, 0.7), inset -5px -5px 10px #FFFFFF;
+                        border-radius: 15px;
+                    
+                        iframe{
+                            border-radius: 15px;
+                            min-height: 450px;
+                        }
+                    }
+                    .text-section{
+                        display: flex;
+                        flex-direction: column;
+
+                        a{
+                            font-size: 16px;
+                            &:first-of-type{
+                                margin-bottom: 5px;
+                            }
+
+                            @media (min-width: @sm){
+                                font-size: 20px;
+                            }
+                        }
+                    }
+                }
+            }
+        }      
+    }
+}
+
