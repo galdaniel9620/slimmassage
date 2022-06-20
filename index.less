@@ -27,8 +27,8 @@
 
 .galery-motivation {
     .inner {
-        margin-top: 80px;
-        margin-bottom: 80px;
+        margin-top: 30px;
+        margin-bottom: 30px;
     }
 
     img {
@@ -138,8 +138,8 @@
     }
 
     .inner {
-        margin-top: 40px;
-        margin-bottom: 40px;
+        margin-top: 20px;
+        margin-bottom: 20px;
         display: flex;
         flex-direction: column;
 
@@ -152,24 +152,6 @@
     .first-section {
         @media (min-width: @sm) {
             width: 50%;
-        }
-
-        a {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            width: 120px;
-            height: 120px;
-            border-radius: 50%;
-            box-shadow: 10px 10px 20px rgba(190, 191, 194, 0.7), -10px -10px 20px #FFFFFF;
-            text-align: center;
-            margin: 20px auto;
-
-            @media (min-width: @sm) {
-                margin-top: 30%;
-                width: 200px;
-                height: 200px;
-            }
         }
     }
 
@@ -185,7 +167,7 @@
 
             @media (min-width: @sm) {
                 margin-bottom: unset;
-                height: 250px;
+                height: 260px;
             }
 
             &:last-of-type,&:first-of-type{
@@ -213,6 +195,35 @@
             }
         }
 
+        
+
+    }
+
+    .round-btn {
+        display: none;
+        justify-content: center;
+        align-items: center;
+        width: 120px;
+        height: 120px;
+        border-radius: 50%;
+        box-shadow: 10px 10px 20px rgba(190, 191, 194, 0.7), -10px -10px 20px #FFFFFF;
+        text-align: center;
+        margin: 20px auto;
+
+        @media (min-width: @sm) {
+            display: flex;
+            margin-top: 30%;
+            width: 200px;
+            height: 200px;
+        }
+
+        &.mobile{
+            display: flex;
+            margin: 0 auto;
+            @media (min-width: @sm) {
+                display: none;
+            }
+        }
     }
 
     .img-benefits {
@@ -227,4 +238,9 @@
             display: block;
         }
     }
+}
+
+.testimonial {
+    height: 700px;
+    margin: 30px auto;
 }

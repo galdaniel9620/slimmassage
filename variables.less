@@ -26,11 +26,11 @@ body {
 }
 
 h1 {
-    font-size: 48px;
+    font-size: 36px;
     font-style: italic;
 
     @media (min-width: @sm) {
-        font-size: 48px;
+        font-size: 44px;
     }
 
     @media (min-width: @lg) {
@@ -39,11 +39,11 @@ h1 {
 }
 
 h2 {
-    font-size: 28px;
+    font-size: 26px;
     font-style: italic;
 
     @media (min-width: @sm) {
-        font-size: 40px;
+        font-size: 36px;
     }
 
     @media (min-width: @lg) {
@@ -393,7 +393,7 @@ footer {
 
             p {
                 font-style: italic;
-                margin-top: 20px;
+                margin-top: 10px;
                 margin-bottom: 20px;
 
                 @media (min-width: @sm) {
@@ -459,7 +459,11 @@ footer {
             .terms {
                 display: flex;
                 flex-direction: column;
-                margin: 25px 0;
+                margin: 10px 0;
+
+                @media (min-width: @sm) {
+                    margin: 25px 0;
+                }
             }
         }
     }
