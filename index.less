@@ -26,25 +26,205 @@
 }
 
 .galery-motivation {
+    .inner {
+        margin-top: 80px;
+        margin-bottom: 80px;
+    }
+
+    img {
+        height: auto;
+        max-width: 100%;
+    }
+
     .first-section {
         display: flex;
+        margin: 20px auto;
+        flex-direction: column;
 
-        div:first-of-type{
-            width: 60%;
+        @media (min-width: @sm) {
+            flex-direction: row;
+        }
+
+        div:first-of-type {
+            margin: 0 auto;
+
+            @media (min-width: @sm) {
+                width: 60%;
+                margin-right: 20px;
+            }
+        }
+
+        div:last-of-type {
+            margin: 0 auto;
+
+            @media (min-width: @sm) {
+                margin: unset;
+                margin-left: 20px;
+            }
+
             img {
-                max-width: 600px;
+                display: none;
+    
+                @media (min-width: @sm) {
+                    display: block;
+                }
             }
         }
 
         h3 {
-            margin: 100px auto;
+            margin: 20px 10px;
             text-align: center;
+
+            @media (min-width: @sm) {
+                margin: 80px 50px 60px;
+                text-align: center;
+                max-width: 400px;
+            }
+        }
+
+        img {
+            @media (min-width: @sm) {
+                margin-top: 40px;
+            }
         }
     }
 
     .second-section {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        flex-direction: column;
+        flex-wrap: wrap;
+
+        @media (min-width: @sm) {
+            flex-direction: row;
+            margin: 80px auto;
+        }
+
         img {
-            margin-left: 300px;
+            order: 2;
+
+            @media (min-width: @sm) {
+                order: 1;
+                margin-left: 5%;
+            }
+        }
+
+        div {
+            order: 1;
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            margin-top: 30px;
+
+            @media (min-width: @sm) {
+                order: 2;
+            }
+
+            a {
+                margin: 30px auto;
+            }
+        }
+    }
+}
+
+.benefits {
+    position: relative;
+
+    @media (min-width: @sm) {
+        flex-direction: row;
+        height: ~"calc(100vh - 100px)";
+        overflow: hidden;
+    }
+
+    .inner {
+        margin-top: 40px;
+        margin-bottom: 40px;
+        display: flex;
+        flex-direction: column;
+
+        @media (min-width: @sm) {
+            flex-direction: row;
+        }
+
+    }
+
+    .first-section {
+        @media (min-width: @sm) {
+            width: 50%;
+        }
+
+        a {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            box-shadow: 10px 10px 20px rgba(190, 191, 194, 0.7), -10px -10px 20px #FFFFFF;
+            text-align: center;
+            margin: 20px auto;
+
+            @media (min-width: @sm) {
+                margin-top: 30%;
+                width: 200px;
+                height: 200px;
+            }
+        }
+    }
+
+    .second-section {
+        @media (min-width: @sm) {
+            width: 50%;
+            height: 100vh;
+            overflow: auto;
+        }
+
+        .benefits-item {
+            margin-bottom: 30px;
+
+            @media (min-width: @sm) {
+                margin-bottom: unset;
+                height: 250px;
+            }
+
+            &:last-of-type,&:first-of-type{
+                display: none;
+
+                @media (min-width: @sm) {
+                    display: block;
+                }
+            }
+
+            h2 {
+
+                @media (min-width: @sm) {
+                    margin-top: 30px;
+                    margin-bottom: 10px;
+                }
+            }
+
+            p {
+                font-size: 18px;
+
+                @media (min-width: @sm) {
+                    font-size: 28px;
+                }
+            }
+        }
+
+    }
+
+    .img-benefits {
+        max-width: 100%;
+        z-index: 2;
+        position: absolute;
+        bottom: 0;
+        display: none;
+
+
+        @media (min-width: @md) {
+            display: block;
         }
     }
 }

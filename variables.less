@@ -39,15 +39,15 @@ h1 {
 }
 
 h2 {
-    font-size: 40px;
+    font-size: 28px;
     font-style: italic;
 
     @media (min-width: @sm) {
-        font-size: 48px;
+        font-size: 40px;
     }
 
     @media (min-width: @lg) {
-        font-size: 64px;
+        font-size: 48px;
     }
 }
 
@@ -212,14 +212,16 @@ a {
                 left: 0;
                 top: 76px;
                 display: none;
-                animation: widthNav 0.6s ease-in-out;
+                // animation:widthNav 0.6s ease-in-out;
 
-                // transform: translateX(100vw);
+                transform: translateX(100vw);
+                transition: all 2s;
 
                 &.nav-active {
-                    animation: widthNav 0.6s ease-in-out;
-                    width: 100vw;
                     display: block;
+                    transform: translateX(0vw);
+                    width: 100vw;
+                    // animation:widthNavActive 0.6s ease-in-out;
                 }
             }
 
@@ -513,12 +515,22 @@ footer {
     }
 }
 
-@keyframes widthNav {
+@keyframes widthNavActive {
     from {
         width: 0vw;
     }
 
     to {
         width: 100vw;
+    }
+}
+
+@keyframes widthNav {
+    from {
+        width: 100vw;
+    }
+
+    to {
+        width: 0vw;
     }
 }
